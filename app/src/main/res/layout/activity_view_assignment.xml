@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewAssignment"
+    android:background="@color/gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/learning" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinssemibold"
+                        android:text="Nanasa Education"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Assignments"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingHorizontal="30dp"
+            android:background="@color/white"
+            android:paddingVertical="10dp">
+
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/assignment" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/assignmentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="13dp" />
+                <TextView
+                    android:id="@+id/moduleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading..."
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/loaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="50dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/imageView3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/loader" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dataLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/remaining"
+                android:padding="20dp"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_weight="1"
+                android:text="Loading..."
+                android:fontFamily="@font/poppinssemibold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Assignment Name"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/assignmentName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Assignment Description"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Assignment Instruction"
+                    android:fontFamily="@font/poppinsregular"/>
+                <TextView
+                    android:id="@+id/instruction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:fontFamily="@font/poppinssemibold"
+                    android:textSize="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Assignment Document"
+                    android:fontFamily="@font/poppinsregular"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/download"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/main_btn"
+                    android:textColor="@color/white"
+                    android:text="Download"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/student"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/uploadPdfText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Upload your document"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/clear"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/danger_btn"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="15dp"
+                        android:text="clear"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/upload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/main_btn">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/upload" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="10dp"
+                            android:padding="10dp"
+                            android:fontFamily="@font/poppinsregular"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/submit"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/main_btn"
+                    android:textColor="@color/white"
+                    android:text="Submit"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/submitted"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="You have submitted this assignment"
+                        android:fontFamily="@font/poppinsregular"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteSub"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/danger_btn"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="15dp"
+                        android:text="Delete"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteSubConfirm"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/danger_btn"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:text="Delete Permanently"
+                        android:visibility="gone"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteSubCancel"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/main_btn"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="8dp"
+                        android:text="Cancel"
+                        android:visibility="gone"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/closedSub"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:padding="30dp"
+                    android:layout_marginVertical="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Assignment submission is closed."
+                        android:fontFamily="@font/poppinsregular"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/teacher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/main_btn"
+                    android:textColor="@color/white"
+                    android:text="Edit"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/viewSubs"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/main_btn"
+                    android:textColor="@color/white"
+                    android:text="View Submissions"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/danger_btn"
+                    android:textColor="@color/white"
+                    android:text="Delete Assignment"
+                    android:fontFamily="@font/poppinsregular"
+                    android:textSize="12dp"/>
+
+                <LinearLayout
+                    android:id="@+id/deleteAssignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:visibility="gone"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="This action cannot be undo. Are you sure, you want to delete this assignment permenetly?"
+                        android:fontFamily="@font/poppinsregular"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/main_btn"
+                        android:textColor="@color/white"
+                        android:text="Cancel"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/deleteConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/danger_btn"
+                        android:textColor="@color/white"
+                        android:text="Delete Permanently"
+                        android:fontFamily="@font/poppinsregular"
+                        android:textSize="12dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/successLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="40dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/success" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Assignment Submitted Successfully"
+                android:padding="20dp"
+                android:fontFamily="@font/poppinsregular"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textAlignment="center"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_btn"
+                android:textColor="@color/white"
+                android:text="Refresh"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="20dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/backToModules"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/main_btn"
+                android:textColor="@color/white"
+                android:text="Back to modules"
+                android:fontFamily="@font/poppinsregular"
+                android:textSize="12dp"
+                android:layout_marginHorizontal="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
